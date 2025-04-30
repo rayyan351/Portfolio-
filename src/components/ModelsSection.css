@@ -1,0 +1,137 @@
+.models-section {
+  min-height: 100vh;
+  width: 100%;
+  background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 100%);
+  color: white;
+  padding: 100px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  box-sizing: border-box;
+}
+
+.models-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.models-header h2 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  color: #ff4c4c;
+  letter-spacing: 2px;
+}
+
+.models-header p {
+  font-size: 1.2rem;
+  color: #ccc;
+}
+
+.models-grid {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.model-card {
+  background: rgba(255, 255, 255, 0.05);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  overflow: hidden;
+  width: 300px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  transform-style: preserve-3d;
+  transition: transform 0.2s ease-in-out;
+
+}
+
+.model-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 15px 40px rgba(255, 76, 76, 0.4);
+}
+
+.model-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.model-card:hover img {
+  transform: scale(1.05);
+}
+
+.model-card h3 {
+  margin: 20px 0 10px;
+  font-size: 1.5rem;
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+.model-card p {
+  font-size: 1rem;
+  color: #ccc;
+  padding: 0 15px 20px;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .models-section {
+    padding: 80px 20px;
+  }
+
+  .models-header h2 {
+    font-size: 2.2rem;
+  }
+
+  .model-card {
+    width: 90%;
+  }
+}
+
+.model-specs {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 12px;
+}
+
+@keyframes floatSpec {
+  0% {
+    transform: translateY(0px) translateX(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-6px) translateX(2px) rotate(1deg);
+  }
+  100% {
+    transform: translateY(0px) translateX(0px) rotate(0deg);
+  }
+}
+
+.spec-badge {
+  padding: 6px 12px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #ff4c4c;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  -webkit-user-select:none;
+  user-select: none;
+  animation: floatSpec 3s ease-in-out infinite;
+}
+
